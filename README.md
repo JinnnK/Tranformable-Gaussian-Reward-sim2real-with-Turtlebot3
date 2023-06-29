@@ -91,7 +91,8 @@ For more details, please refer to [here](https://github.com/VisualComputingInsti
      - `action_space.kinematics = "unicycle"` if your robot has a differential drive
        - Explanations on [holonomic robot](https://techtv.mit.edu/videos/9392041131714766aa78ffadf4e8c76c/#:~:text=Holonomic%20drive%2C%20in%20the%20realm,direction%2C%20would%20not%20be%20holonomic.) v.s. [differential drive robot](https://msl.cs.uiuc.edu/planning/node659.html)
      - adjust `sim.circle_radius`, `sim.arena_size`, and `sim.human_num` based on your real environment
-  3. In the `crowd_sim/envs/ros_turtlebot2i_env.py`, replace `/cmd_vel` on line 80 with the appropriate command node's name.
+  3. In the `arguments.py`, set `use-linear-lr-decay` to True on line 124.
+  4. In the `crowd_sim/envs/ros_turtlebot2i_env.py`, replace `/cmd_vel` on line 80 with the appropriate command node's name.
 
 - After you change the configurations, run
   ```
