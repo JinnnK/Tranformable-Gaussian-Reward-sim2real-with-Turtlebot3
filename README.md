@@ -93,6 +93,7 @@ For more details, please refer to [here](https://github.com/VisualComputingInsti
      - adjust `sim.circle_radius`, `sim.arena_size`, and `sim.human_num` based on your real environment
   3. In the `arguments.py`, set `use-linear-lr-decay` to True on line 124.
   4. In the `crowd_sim/envs/ros_turtlebot2i_env.py`, replace `/cmd_vel` on line 80 with the appropriate command node's name.
+  5. Replace the `dr_spaam_ros.py` located at `2D_lidar_person_detection/dr_spaam_ros/src/dr_spaam_ros` with the `dr_spaam_ros.py` file uploaded in this source code.
 
 - After you change the configurations, run
   ```
