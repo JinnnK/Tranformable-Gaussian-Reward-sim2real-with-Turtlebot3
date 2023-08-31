@@ -94,6 +94,15 @@ For more details, please refer to [here](https://github.com/VisualComputingInsti
   3. In the `arguments.py`, set `use-linear-lr-decay` to True on line 124.
   4. In the `crowd_sim/envs/ros_turtlebot2i_env.py`, replace `/cmd_vel` on line 80 with the appropriate command node's name.
   5. Replace the `dr_spaam_ros.py` located at `2D_lidar_person_detection/dr_spaam_ros/src/dr_spaam_ros` with the `dr_spaam_ros.py` file uploaded in this source code.
+  6. Open the `config.py` file located in your project's directory. Set `sim2real.use_dummy_detect` to `False`.
+  7. In the `crowd_sim/envs/ros_turtlebot2i_env.py`, In the `state_cb` function, add the following lines:
+   
+   ```python
+   humanArrayMsg.header.frame_id = "map"
+   jointStateMsg.header.frame_id = "map"
+   ```
+  8. Add `O['visible_masks'][:] = True` to the `process_obs_rew` function in `Crowd_Nav_Attn/rl/vec_env/vec_pretext_normalize.py`.
+  9. In `crowd_sim/envs/ros_turtlebot2i_env.py`, adjust the value of the `beta` parameter in the `smooth` function for fine tuning. Please note that incorrect tuning might lead to discrepancies between simulation and actual movement.
 
 - After you change the configurations, run
   ```
@@ -184,14 +193,6 @@ If you find the code or the paper useful for your research, please cite the foll
   author={Liu, Shuijing and Chang, Peixin and Huang, Zhe and Chakraborty, Neeloy and Hong, Kaiwen and Liang, Weihang and Livingston McPherson, D. and Geng, Junyi and Driggs-Campbell, Katherine},
   booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
   year={2023}
-}
-
-@inproceedings{liu2020decentralized,
-  title={Decentralized Structural-RNN for Robot Crowd Navigation with Deep Reinforcement Learning},
-  author={Liu, Shuijing and Chang, Peixin and Liang, Weihang and Chakraborty, Neeloy and Driggs-Campbell, Katherine},
-  booktitle={IEEE International Conference on Robotics and Automation (ICRA)},
-  year={2021},
-  pages={3517-3524}
 }
 ```
 
