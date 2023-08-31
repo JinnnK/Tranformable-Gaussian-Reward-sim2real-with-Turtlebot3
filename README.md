@@ -2,7 +2,7 @@
 This repository contains the sim2real procedure and code for our paper titled ["Transformable Gaussian Reward Function for Robot Navigation with Deep Reinforcement Learning"](https://github.com/JinnnK/Transformable-Gaussian-Reward-for-Robot-Nav).
 In sim2real, we adapted a people detector and SLAM from previous works, and transfered a simulated crowd navigation policy to a TurtleBot3 without any real-world training.
 For more details, please refer to the [Notion]() and [arXiv preprint]().
-For experiment demonstrations, please refer to the [youtube video]().
+For experiment demonstrations, please refer to the [youtube video](https://youtu.be/9x24k75Zj5k?si=7M-jjLpsRVTWso_9).
 This repo only serves as a reference point for the sim2real transfer of crowd navigation. And this repository is a modification of the sim2real method using TurtleBot2i to apply it to TurtleBot3. Therefore, source code contains many parts where the term "turtlebot2i" is used. However, it works with TurtleBot3. If you wish to use TurtleBot2i, please refer to the following [GitHub repository](https://github.com/Shuijing725/CrowdNav_Sim2Real_Turtlebot).
 Since there are lots of uncertainties in real-world experiments that may affect performance, **we cannot guarantee that it is reproducible on your case.**
 
