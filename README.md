@@ -75,8 +75,8 @@ cd ~/catkin_ws
 catkin_make
 catkin build dr_spaam_ros
 ```
-2-2. Download datasets and modify the configs
-You can download the dataset from [here](https://drive.google.com/drive/folders/1Wl2nC8lJ6s9NI1xtWwmxeAUnuxDiiM4W). And in the `topics.yaml` located in `dr_spaam_ros/config/`, change the subscriber from `/segway/scan_multi` to `/scan`. Additionally, in the `dr_spaam_ros.yaml`, modify the weight_file path and detector_model according to the pre-trained model you want to use.
+2-2. Change the topic name.
+In the `topics.yaml` located in `dr_spaam_ros/config/`, change the subscriber from `/segway/scan_multi` to `/scan`. Additionally, in the `dr_spaam_ros.yaml`, modify the weight_file path and detector_model according to the pre-trained model you want to use.
 
 Please note that 2D_lidar_person_detection works with numpy version 1.23.0 or lower.
 For more details, please refer to [here](https://github.com/VisualComputingInstitute/2D_lidar_person_detection).
